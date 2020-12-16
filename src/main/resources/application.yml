@@ -1,0 +1,56 @@
+server:
+  port: 8088 #端口号
+
+spring:
+  
+  #数据库
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://www.lgqoxb.top/blog?characterEncoding=utf-8&useSSL=false
+    username: lgq
+    password: 1234
+
+  #开启事务回滚
+  transaction:
+    rollback-on-commit-failure: true
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+#logging日志
+#logging:
+#  file: ./logs/blog.log  #设置log文件输出地址
+
+#redis缓存
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: 1234
+
+#消息队列rabbitmq
+#  rabbitmq:
+#    host: 127.0.0.1
+#    port: 5672
+#    username: guest
+#    password: guest
+#    publisher-confirms: true #消息发送到交换机确认机制，是否确认回调
+#    publisher-returns: true #消息发送到交换机确认机制，是否返回回调
+#    listener:
+#      simple:
+#        acknowledge-mode: manual #开启手动应答
+#        retry:
+#          enabled: true #是否支持重试
+
+#mybatis-plus配置
+mybatis-plus:
+  mapper-locations: classpath*:mybatis/mapper/*/*.xml # 扫描mapper
+  type-aliases-package: com.lgq.entity
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com:
+      lgq:
+        mapper: debug

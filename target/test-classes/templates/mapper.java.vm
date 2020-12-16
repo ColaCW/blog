@@ -1,0 +1,26 @@
+package ${package.Mapper};
+
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import ${package.Entity}.admin.${entity};
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
+import java.util.Map;
+
+/**
+ * $!{table.comment} Mapper 接口
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+#if(${kotlin})
+interface ${table.mapperName} : ${superMapperClass}<${entity}>
+#else
+public interface ${table.mapperName} extends ${superMapperClass}<${entity}> {
+
+    List<Map<String, Object>> selectPageBySql(Page<Map<String, Object>> page, @Param("params") Map<String, Object> queryCondition);
+
+}
+#end

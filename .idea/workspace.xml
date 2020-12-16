@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="52857743-8d87-4faf-9187-af2ca39d6d58" name="Default Changelist" comment="生成代码" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JRebelWorkspace">
+    <option name="jrebelEnabledAutocompile" value="true" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="userSettingsFile" value="$PROJECT_DIR$/../../../apache-maven-3.6.3/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1gf8DHfjozwQsn2wHPDbSLzjeTv" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="MyBatisLogPluginindexNum" value="885" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.obroom.plugin.mybatislog.running" value="0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/lgq/service/admin/impl" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/lgq/entity/admin" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.lgq.common.util" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/lgq/service/admin/impl" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/lgq/service/admin" />
+      <recent name="$PROJECT_DIR$/src/main/resources/mybatis/mapper/admin" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/lgq/mapper/admin" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/lgq/entity/admin" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.BlogApplication">
+    <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.blog.CodeGenerator" />
+      <module name="blog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.blog.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="blog" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lgq.BlogApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CodeGenerator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="52857743-8d87-4faf-9187-af2ca39d6d58" name="Default Changelist" comment="" />
+      <created>1598494164816</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598494164816</updated>
+      <workItem from="1598494171191" duration="2436000" />
+      <workItem from="1598864014190" duration="1504000" />
+      <workItem from="1598923703080" duration="4000" />
+      <workItem from="1598923726053" duration="8000" />
+      <workItem from="1598923749259" duration="3000" />
+      <workItem from="1599205276543" duration="8699000" />
+      <workItem from="1599792356637" duration="10133000" />
+      <workItem from="1599979262759" duration="57000" />
+      <workItem from="1600049392141" duration="4595000" />
+      <workItem from="1600072097718" duration="1925000" />
+      <workItem from="1600244338212" duration="2543000" />
+      <workItem from="1600407857737" duration="4330000" />
+      <workItem from="1600653162277" duration="566000" />
+      <workItem from="1600672160666" duration="4757000" />
+      <workItem from="1600912785242" duration="13145000" />
+      <workItem from="1600949354638" duration="579000" />
+      <workItem from="1600998025635" duration="10770000" />
+      <workItem from="1603246769588" duration="68000" />
+      <workItem from="1603246843728" duration="3561000" />
+      <workItem from="1605492897459" duration="6434000" />
+      <workItem from="1605581343203" duration="1994000" />
+      <workItem from="1608098538502" duration="1185000" />
+    </task>
+    <task id="LOCAL-00001" summary="修改">
+      <created>1599813617756</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1599813617756</updated>
+    </task>
+    <task id="LOCAL-00002" summary="修改">
+      <created>1600672287773</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1600672287773</updated>
+    </task>
+    <task id="LOCAL-00003" summary="生成代码">
+      <created>1600927147042</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1600927147042</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修改" />
+    <MESSAGE value="生成代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="生成代码" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="773" y="259" key="#com.intellij.ide.util.MemberChooser" timestamp="1605519910070">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="773" y="259" key="#com.intellij.ide.util.MemberChooser/0.23.1920.1057@0.23.1920.1057" timestamp="1605519910070" />
+    <state x="698" y="305" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601015659415">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="698" y="305" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1601015659415" />
+    <state x="469" y="143" key="CommitChangelistDialog2" timestamp="1608099797705">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="469" y="143" key="CommitChangelistDialog2/0.23.1920.1057@0.23.1920.1057" timestamp="1608099797705" />
+    <state x="192" y="118" key="DiffContextDialog" timestamp="1605513127606">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="192" y="118" key="DiffContextDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1605513127606" />
+    <state width="1876" height="401" key="GridCell.Tab.0.bottom" timestamp="1608099856515">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1876" height="401" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1608099856515" />
+    <state width="1876" height="401" key="GridCell.Tab.0.center" timestamp="1608099856514">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1876" height="401" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1608099856514" />
+    <state width="1876" height="401" key="GridCell.Tab.0.left" timestamp="1608099856513">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1876" height="401" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1608099856513" />
+    <state width="1876" height="401" key="GridCell.Tab.0.right" timestamp="1608099856514">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1876" height="401" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1608099856514" />
+    <state width="1876" height="401" key="GridCell.Tab.1.bottom" timestamp="1608099856516">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1876" height="401" key="GridCell.Tab.1.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1608099856516" />
+    <state width="1876" height="401" key="GridCell.Tab.1.center" timestamp="1608099856515">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1876" height="401" key="GridCell.Tab.1.center/0.23.1920.1057@0.23.1920.1057" timestamp="1608099856515" />
+    <state width="1876" height="401" key="GridCell.Tab.1.left" timestamp="1608099856515">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1876" height="401" key="GridCell.Tab.1.left/0.23.1920.1057@0.23.1920.1057" timestamp="1608099856515" />
+    <state width="1876" height="401" key="GridCell.Tab.1.right" timestamp="1608099856516">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1876" height="401" key="GridCell.Tab.1.right/0.23.1920.1057@0.23.1920.1057" timestamp="1608099856516" />
+    <state width="1876" height="401" key="GridCell.Tab.2.bottom" timestamp="1608099856517">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1876" height="401" key="GridCell.Tab.2.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1608099856517" />
+    <state width="1876" height="401" key="GridCell.Tab.2.center" timestamp="1608099856516">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1876" height="401" key="GridCell.Tab.2.center/0.23.1920.1057@0.23.1920.1057" timestamp="1608099856516" />
+    <state width="1876" height="401" key="GridCell.Tab.2.left" timestamp="1608099856516">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1876" height="401" key="GridCell.Tab.2.left/0.23.1920.1057@0.23.1920.1057" timestamp="1608099856516" />
+    <state width="1876" height="401" key="GridCell.Tab.2.right" timestamp="1608099856517">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1876" height="401" key="GridCell.Tab.2.right/0.23.1920.1057@0.23.1920.1057" timestamp="1608099856517" />
+    <state x="548" y="293" key="IDE.errors.dialog" timestamp="1603246871620">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="548" y="293" key="IDE.errors.dialog/0.23.1920.1057@0.23.1920.1057" timestamp="1603246871620" />
+    <state x="755" y="261" key="RollbackChangesDialog" timestamp="1605513128990">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="755" y="261" key="RollbackChangesDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1605513128990" />
+    <state x="469" y="190" key="SettingsEditor" timestamp="1603246862948">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="469" y="190" key="SettingsEditor/0.23.1920.1057@0.23.1920.1057" timestamp="1603246862948" />
+    <state x="560" y="291" key="Vcs.Push.Dialog.v2" timestamp="1600927149284">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="560" y="291" key="Vcs.Push.Dialog.v2/0.23.1920.1057@0.23.1920.1057" timestamp="1600927149284" />
+    <state x="763" y="472" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600927125110">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="763" y="472" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1920.1057@0.23.1920.1057" timestamp="1600927125110" />
+    <state x="666" y="308" width="588" height="486" key="find.popup" timestamp="1601022692065">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="666" y="308" width="588" height="486" key="find.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1601022692065" />
+    <state x="625" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1605519917442">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="625" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1605519917442" />
+  </component>
+</project>

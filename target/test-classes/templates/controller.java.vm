@@ -1,0 +1,99 @@
+package ${package.Controller};
+
+import ${package.Service}.admin.${table.serviceName};
+
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.lgq.dto.admin.BlogCategoryDTO;
+import com.lgq.service.admin.BlogCategoryService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+#if(${superControllerClassPackage})
+import ${superControllerClassPackage};
+#end
+import java.util.Map;
+
+/**
+ * $!{table.comment} controller
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+#if(${restControllerStyle})
+@RestController
+#else
+@Controller
+#end
+#set($end=$table.entityPath.length() - 2)
+@RequestMapping("/admin/${table.entityPath.substring(0,$end)}")
+#if(${kotlin})
+class ${table.controllerName}#if(${superControllerClass}) : ${superControllerClass}()#end
+#else
+@CrossOrigin(allowCredentials = "true", origins = "*", maxAge = 3600)
+#if(${superControllerClass})
+public class ${table.controllerName} extends ${superControllerClass} {
+#else
+public class ${table.controllerName} {
+#end
+
+    private final Logger logger = LoggerFactory.getLogger(${table.controllerName}.class);
+
+    #set($service=${table.serviceName.substring(0,1).toLowerCase()}+${table.serviceName.substring(1)})
+    #set($dtoName=$entity.substring(0,$end) + 'DTO')
+    #set($dto=${dtoName.substring(0,1).toLowerCase()}+${dtoName.substring(1)})
+    @Autowired
+    private ${table.serviceName} ${service};
+
+    /**
+     * 分页查询数据
+     */
+    @GetMapping("/selectPageBySql")
+    public Page<Map<String, Object>> selectPageBySql(@RequestParam Map<String, Object> queryCondition, @RequestParam
+            ("currentPage") int currentPage, @RequestParam("pageSize") int pageSize) {
+        Page<Map<String, Object>> page = new Page(currentPage, pageSize);
+        return ${service}.selectPageBySql(page, queryCondition);
+    }
+
+    /**
+     * 按ID查询数据
+     */
+    @GetMapping("/getById/{id}")
+    public Map<String, Object> getById(@PathVariable("id") Long id) {
+        return ${service}.getById(id);
+    }
+
+    /**
+     * 进行数据新增
+     */
+    @PostMapping("/add")
+    public Map<String, Object> add(@RequestBody ${dtoName} ${dto}) {
+        return ${service}.add(${dto});
+    }
+
+    /**
+     * 进行数据修改
+     */
+    @PostMapping("/alter/{id}")
+    public Map<String, Object> alter(@PathVariable("id") Long id, @RequestBody ${dtoName} ${dto}) {
+        return ${service}.alter(id, ${dto});
+    }
+
+    /**
+     * 根据id删除对象
+     */
+    @PostMapping("/del/{id}")
+    public void deleteById(@PathVariable("id") Long id) {
+        ${service}.deleteById(id);
+    }
+
+    /**
+     * 根据IDs批量删除对象
+     */
+    @PostMapping("/deleteBatch/{ids}")
+    public void deleteByIds(@PathVariable("ids") String ids) {
+        ${service}.deleteBatchIds(ids);
+    }
+}
+
+#end

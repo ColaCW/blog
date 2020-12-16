@@ -1,0 +1,25 @@
+/**
+ * ${table.comment}
+ * @Author: 刘国强
+ */
+import axios from '@/api/fetch';
+import SERVER from '@/api/server';
+
+#set($end=$table.entityPath.length() - 2)
+// 分页查询
+export const selectPageBySql = params => axios.get(`${SERVER.SERVICE_HOST}/admin/${table.entityPath.substring(0,$end)}/selectPageBySql`, { params });
+
+// 按ID查询数据
+export const getById = id => axios.get(`${SERVER.SERVICE_HOST}/admin/${table.entityPath.substring(0,$end)}/getById/${id}`);
+
+// 进行数据新增
+export const add = params => axios.post(`${SERVER.SERVICE_HOST}/admin/${table.entityPath.substring(0,$end)}/add`, params);
+
+// 进行数据修改
+export const alter = params => axios.post(`${SERVER.SERVICE_HOST}/admin/${table.entityPath.substring(0,$end)}/alter/${params.id}`, params);
+
+// 根据id删除对象
+export const del = id => axios.post(`${SERVER.SERVICE_HOST}/admin/${table.entityPath.substring(0,$end)}/del/${id}`);
+
+// 根据IDs批量删除对象
+export const deleteBatch = ids => axios.post(`${SERVER.SERVICE_HOST}/admin/${table.entityPath.substring(0,$end)}/deleteBatch/${ids}`);

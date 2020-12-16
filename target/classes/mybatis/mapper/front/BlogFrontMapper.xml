@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lgq.mapper.front.BlogFrontMapper">
+
+    <!-- 集合查询& 分页查询例子,入参数为Map,出参数也为Map -->
+    <select id="getBlogs" resultType="java.util.Map">
+        select ID,
+               NAME,
+               BRIEF,
+               TAGS,
+               CATEGORY_ID,
+               VIEW_NUM,
+               LIKE_NUM,
+               STATUS,
+               IMG_SRC,
+               REMARK,
+               IS_DELETED,
+               CREATED_BY,
+               CREATED_NAME,
+               CREATED_AT,
+               UPDATED_BY,
+               UPDATED_NAME,
+               UPDATED_AT,
+               VERSION
+        from t_blog t
+        where 1 = 1
+    </select>
+
+</mapper>

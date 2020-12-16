@@ -1,0 +1,123 @@
+package ${package.ServiceImpl};
+
+#set($end=$entity.length() - 2)
+#set($dtoName=$entity.substring(0,$end) + 'DTO')
+import ${package.Entity}.admin.${entity};
+import ${package.Mapper}.admin.${table.mapperName};
+import ${package.Service}.admin.${table.serviceName};
+import ${superServiceImplClassPackage};
+import org.springframework.stereotype.Service;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.lgq.common.exception.ServiceBizException;
+import com.lgq.common.util.StringUtils;
+import com.lgq.dto.admin.${dtoName};
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.Map;
+
+/**
+ * $!{table.comment} 服务实现类
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+@Service
+@Transactional(rollbackFor = Exception.class)
+#if(${kotlin})
+open class ${table.serviceImplName} : ${superServiceImplClass}<${table.mapperName}, ${entity}>(), ${table.serviceName} {
+
+}
+#else
+public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.mapperName}, ${entity}> implements ${table.serviceName} {
+
+        //日志对象
+        private static final Logger logger = LoggerFactory.getLogger(${table.serviceImplName}.class);
+
+        #set($mapper=${table.mapperName.substring(0,1).toLowerCase()}+${table.mapperName.substring(1)})
+        #set($po=${entity.substring(0,1).toLowerCase()}+${entity.substring(1)})
+        #set($dto=${dtoName.substring(0,1).toLowerCase()}+${dtoName.substring(1)})
+        @Autowired
+        private ${table.mapperName} ${mapper};
+
+        /**
+         * 分页查询对应数据
+         */
+        @Override
+        @Transactional(readOnly = true)
+        public Page<Map<String, Object>> selectPageBySql(Page<Map<String, Object>> page, Map<String, Object> queryCondition) {
+            // 获取总条数
+            page.setRecords(${mapper}.selectPageBySql(page, queryCondition));
+            return page;
+        }
+
+        /**
+         * 根据查询条件返回结果集
+         */
+        @Override
+        @Transactional(readOnly = true)
+        public Map<String, Object> getById(Long id) {
+            ${entity} ${po} = ${mapper}.selectById(id);
+            if(${po}!=null){
+                return ${po}.toMaps();
+            }else{
+                throw new ServiceBizException("查询失败,没有符合条件的数据");
+            }
+        }
+
+        /**
+         * 根据DTO 进行数据新增
+         */
+        @Override
+        public Map<String,Object> add(${dtoName} ${dto}){
+            //对对象进行赋值操作
+            ${entity} ${po} = ${dto}.transDtoToPo(${entity}.class);
+            //执行插入
+            ${mapper}.insert(${po});
+            //返回插入的值
+            return ${po}.toMaps();
+        }
+
+        /**
+         * 根据DTO 及ID 进行数据更新
+         */
+        @Override
+        public Map<String,Object> alter(Long id, ${dtoName} ${dto}) {
+            ${entity} ${po} = ${mapper}.selectById(id);
+            //对对象进行赋值操作
+            ${dto}.transDtoToPo(${po});
+            //执行更新
+            ${mapper}.updateById(${po});
+            return ${po}.toMaps();
+        }
+
+        /**
+         * 根据ID 进行删除数据
+         */
+        @Override
+        public void deleteById(Long id) {
+            int deleteCount = ${mapper}.deleteById(id);
+            logger.debug("删除数量：{}",deleteCount);
+            if (deleteCount<=0) {
+                throw new ServiceBizException("删除失败,没有符合条件的数据");
+            }
+        }
+
+        /**
+         * 根据ids 进行删除
+         */
+        @Override
+        public void deleteBatchIds(String ids) {
+            List<Long> longList = StringUtils.convertStrToArray(ids,",", Long.class);
+            int deleteCount = ${mapper}.deleteBatchIds(longList);
+            logger.debug("删除数量：{}",deleteCount);
+            if (deleteCount!=longList.size()) {
+                throw new ServiceBizException("删除失败,没有符合条件的数据");
+            }
+        }
+
+}
+#end
