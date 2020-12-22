@@ -4,7 +4,7 @@
 
     <!-- 集合查询& 分页查询例子,入参数为Map,出参数也为Map -->
     <select id="selectPageBySql" resultType="java.util.Map">
-        select
+        select1
                     ID id,
                     NAME name,
                     BRIEF brief,
