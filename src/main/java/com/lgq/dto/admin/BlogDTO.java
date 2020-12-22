@@ -113,6 +113,11 @@ public class BlogDTO implements Serializable {
      */
     private Integer version;
 
+    /**
+     * 明细对象
+     */
+    private BlogDetailDTO blogDetailDTO;
+
     public Long getId() {
         return id;
     }
@@ -255,6 +260,14 @@ public class BlogDTO implements Serializable {
 
     public void setVersion(Integer version) {
         this.version = version;
+    }
+
+    public BlogDetailDTO getBlogDetailDTO() {
+        return blogDetailDTO;
+    }
+
+    public void setBlogDetailDTO(BlogDetailDTO blogDetailDTO) {
+        this.blogDetailDTO = blogDetailDTO;
     }
 
     @Override

@@ -16,11 +16,14 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class ExceptionAdvice {
 
-	// 定义日志接口
+	/**
+	 * Logger日志
+	 */
 	private static final Logger logger = LoggerFactory.getLogger(ExceptionAdvice.class);
 
-	// 默认异常
-	@SuppressWarnings("rawtypes")
+	/**
+	 * 默认异常
+	 */
 	@ExceptionHandler(Exception.class)
 	@ResponseBody
 	public ResponseEntity exception(Exception error) {
@@ -28,8 +31,9 @@ public class ExceptionAdvice {
 		return new ResponseEntity<>(new ResultObj(500, "系统出错,请联系管理员"), HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 	
-	// 自定义业务异常
-	@SuppressWarnings("rawtypes")
+	/**
+	 * 自定义业务异常
+	 */
 	@ExceptionHandler(ServiceBizException.class)
 	@ResponseBody
 	public ResponseEntity runtimeException(ServiceBizException error) {
@@ -37,8 +41,9 @@ public class ExceptionAdvice {
 		return new ResponseEntity<>(new ResultObj(500, error.getMessage()), HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 
-	// 自定义登录异常
-	@SuppressWarnings("rawtypes")
+	/**
+	 * 自定义登录异常
+	 */
 	@ExceptionHandler(AuthLoginOutException.class)
 	@ResponseBody
 	public ResponseEntity authLoginOutException(AuthLoginOutException error) {

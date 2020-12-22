@@ -33,7 +33,7 @@ public class BlogDetailPO extends Model<BlogDetailPO> {
      * 博客ID
      */
     @TableField("BLOG_ID")
-    private String blogId;
+    private Long blogId;
 
     /**
      * 博客正文
@@ -110,11 +110,11 @@ public class BlogDetailPO extends Model<BlogDetailPO> {
         this.id = id;
     }
 
-    public String getBlogId() {
+    public Long getBlogId() {
         return blogId;
     }
 
-    public void setBlogId(String blogId) {
+    public void setBlogId(Long blogId) {
         this.blogId = blogId;
     }
 

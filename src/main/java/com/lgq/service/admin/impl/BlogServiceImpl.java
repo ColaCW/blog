@@ -79,9 +79,12 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, BlogPO> implements 
             BlogPO blogPO = blogMapper.selectById(id);
             //对对象进行赋值操作
             blogDTO.transDtoToPo(blogPO);
-            //执行更新
-            blogMapper.updateById(blogPO);
-            return blogPO.toMaps();
+            int affectRows = blogMapper.updateById(blogPO);
+            if(affectRows>0){
+                return blogPO.toMaps();
+            }else{
+                throw new ServiceBizException("此数据已被修改，请刷新重试");
+            }
         }
 
         /**
