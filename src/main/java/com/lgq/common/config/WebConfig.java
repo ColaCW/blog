@@ -1,8 +1,8 @@
 package com.lgq.common.config;
 
-import com.baomidou.mybatisplus.extension.plugins.OptimisticLockerInterceptor;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import com.lgq.common.baseObj.ResultObj;
+import com.lgq.common.interceptor.OptimisticLockerInterceptor;
 import org.springframework.boot.autoconfigure.jackson.Jackson2ObjectMapperBuilderCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -56,7 +56,9 @@ public class WebConfig {
         return builder -> builder.serializerByType(LocalDateTime.class, localDateTimeDeserializer());
     }
 
-    // mybatis-plus 乐观锁配置
+    /**
+     * mybatis-plus 乐观锁配置
+     */
     @Bean
     public OptimisticLockerInterceptor optimisticLockerInterceptor() {
         return new OptimisticLockerInterceptor();

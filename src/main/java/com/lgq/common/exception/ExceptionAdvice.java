@@ -27,7 +27,6 @@ public class ExceptionAdvice {
 	@ExceptionHandler(Exception.class)
 	@ResponseBody
 	public ResponseEntity exception(Exception error) {
-		logger.error(error.getMessage(), error);
 		return new ResponseEntity<>(new ResultObj(500, "系统出错,请联系管理员"), HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 	
@@ -37,7 +36,6 @@ public class ExceptionAdvice {
 	@ExceptionHandler(ServiceBizException.class)
 	@ResponseBody
 	public ResponseEntity runtimeException(ServiceBizException error) {
-		logger.error(error.getMessage());
 		return new ResponseEntity<>(new ResultObj(500, error.getMessage()), HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 
@@ -47,7 +45,6 @@ public class ExceptionAdvice {
 	@ExceptionHandler(AuthLoginOutException.class)
 	@ResponseBody
 	public ResponseEntity authLoginOutException(AuthLoginOutException error) {
-		logger.error(error.getMessage());
 		return new ResponseEntity<>(new ResultObj(401, error.getMessage()), HttpStatus.UNAUTHORIZED);
 	}
 
