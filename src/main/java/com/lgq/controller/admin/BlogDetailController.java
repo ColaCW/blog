@@ -45,7 +45,7 @@ public class BlogDetailController {
     }
 
     /**
-     * 进行数据新增
+     * 新增数据
      */
     @PostMapping("/add")
     public Map<String, Object> add(@RequestBody BlogDetailDTO blogDetailDTO) {
